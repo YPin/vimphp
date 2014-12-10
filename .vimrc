@@ -58,7 +58,7 @@ filetype plugin indent on    " required
  
 " NERDTree
 " Open NERDTree automatically if no file is open
-autocmd vimenter * if !argc() | NERDTree | endif
+autocmd VimEnter * if !argc() | NERDTree | endif
 
 " Close NERDTree automatically if only thing left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
