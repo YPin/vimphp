@@ -64,10 +64,13 @@ autocmd VimEnter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 set hlsearch
 set number
-set tabstop=4
+" set tabstop=4
+" set autoindent
+" always uses spaces instead of tab characters
+set expandtab
 set shiftwidth=4
-set autoindent
 set softtabstop=4
+
 set encoding=utf-8
 set mouse=a
 
@@ -76,3 +79,4 @@ map <F2> :NERDTreeToggle<CR>
 map <F3> :NERDTreeFocus<CR>
 
 autocmd BufEnter * lcd %:p:h 
+imap <C-Return> <CR><CR><C-o>k<Tab>
